@@ -7,7 +7,7 @@ import kodlama.io.rentACar.business.responses.GetAllBrandsResponse;
 
 public interface BrandService {
 	
-	List<GetAllBrandsResponse> getAll();
+	List<GetAllBrandsResponse> getAll();    // son kullnaici bizden tüm markalari istiyor, biz ona bir şey return ettiğimiz için response(yanıt yani).
 	
 	void add(CreateBrandRequest createBrandRequest);
 

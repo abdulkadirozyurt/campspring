@@ -8,5 +8,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreateBrandRequest {
+	// marka oluşturmak istendiğinde apiye gönderilen istek
+	
+	
 	private String name;
+
 }
+
+
+
+
+
+// son kullanıcıdan apiye bir şey varsa bu request
+// apiden son kullanıcıya response

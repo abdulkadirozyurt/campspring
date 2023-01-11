@@ -30,7 +30,7 @@ public class BrandManager implements BrandService {
 
 	@Override
 	public List<GetAllBrandsResponse> getAll() {
-
+														// burada findAll --> list of Brand döndürüyor, ama biz List<GetAllBrandsResponse> istiyoruz. 
 		List<Brand> brands = brandRepository.findAll();
 		List<GetAllBrandsResponse> brandsResponse = new ArrayList<GetAllBrandsResponse>();
 
@@ -42,13 +42,22 @@ public class BrandManager implements BrandService {
 		}
 
 		return brandsResponse;
+
+		/*
+		 * Elimizde veritabanından gelen bir sürü veri var
+		 * boş bir liste oluşturuyoruz
+		 * foreach ile her dolaştığımda bir eleman oluşturuyoruz
+		 * veritabanından gelen veriyi boş listeye eşliyoruz. (alanlarıyla birlikte)
+		 * 
+		 * */
 	}
 
 	@Override
 	public void add(CreateBrandRequest createBrandRequest) {
-			Brand brand = new Brand();
-			brand.setName(createBrandRequest.getName());
-			this.brandRepository.save(brand);
+		Brand brand = new Brand();
+		brand.setName(createBrandRequest.getName());
+		this.brandRepository.save(brand);  // veritabanı brand'in ne olduğunu biliyor, brandrequesti bilmiyor o yüzden bizden brand türünde bişey istiyor.
 	}
+		
 
 }

@@ -20,29 +20,30 @@ import kodlama.io.rentACar.business.responses.GetAllBrandsResponse;
 public class BrandsController {
 
 	private BrandService brandService;
-	
+
 	@Autowired // spring yeni versiyonlarında koymayınca da çalışır
-	// git parametrelerine bak,(brandservice ) git uygulamayı tara, brandservice'i kim implemente ediyor? (brandmanager) onun new'lenmiş halini bana ver
+	// git parametrelerine bak,(brandservice ) git uygulamayı tara, brandservice'i
+	// kim implemente ediyor? (brandmanager) onun new'lenmiş halini bana ver
+
 	public BrandsController(BrandService brandService) {
 		this.brandService = brandService;
 	}
-	@GetMapping("/getall") 
+
+	@GetMapping("/getall")
 	public List<GetAllBrandsResponse> getAll() {
-		
+
 // @Autowired bunu yazma yerine geçer	//BrandManager brandManager = new BrandManager(new InMemoryBrandRepository());
-		
-		return brandService.getAll();
-		
-		
+
+		return this.brandService.getAll();
+
 //   www.rentacar.com/api/brands/getAll deyince çalışacak olan yer. (ÖRNEK)
 	}
 	
 	@PostMapping("/add")
 	public void add(CreateBrandRequest createBrandRequest) {
-		this.brandService.add(createBrandRequest); 
+		this.brandService.add(createBrandRequest);	
 	}
 
 }
-
 
 // istek, kontrolöre yani buraya yapılıyor, kontrolör isteği doğru bulursa business'a gidiyor, orada iş kurallarına uyarda data access'e veriyi getir deniyor.'

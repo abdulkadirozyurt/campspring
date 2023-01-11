@@ -1,5 +1,7 @@
 package kodlama.io.rentACar.entities.concretes;
 
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,22 +28,5 @@ public class Brand {
 	@Column(name = "name")
 	private String name;
 
-	/*
-	 * public Brand() {
-	 * 
-	 * }
-	 * 
-	 * public Brand(int id, String brand) {
-	 * 
-	 * this.id = id; this.brand = brand; }
-	 * 
-	 * public int getId() { return id; }
-	 * 
-	 * public void setId(int id) { this.id = id; }
-	 * 
-	 * public String getBrand() { return this.brand; }
-	 * 
-	 * public void setBrand(String brand) { this.brand = brand; }
-	 */
-
+	
 }
