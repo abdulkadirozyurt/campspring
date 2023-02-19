@@ -7,11 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class GetAllBrandsResponse {
+public class GetByIdBrandResponse {
 	private int id;
 	private String name;
-
 }
-
-// tüm brandler lislemek istendiğindeki yanıtımız.
-// son kullanıcıya, apiyi kullanan uygulamaya vermek istediğimiz bilgiler,alanlar

@@ -20,8 +20,8 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Brand {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id // primary key
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //auto increment yapmak için  
 	@Column(name = "id")
 	private int id;
 
