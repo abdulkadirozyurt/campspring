@@ -11,17 +11,14 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateBrandRequest {	
+public class CreateModelRequest {
+	
 	@NotNull
 	@NotBlank
 	@Size(min = 3,max = 20)
 	private String name;
-
+	
+	@NotNull
+	@NotBlank
+	private int brandId;    // yeni bir model eklediğimizde bunun markaId si ne olacak?
 }
-
-
-
-
-// marka oluşturmak istendiğinde apiye gönderilen istek
-// son kullanıcıdan apiye bir şey varsa bu request
-// apiden son kullanıcıya response

@@ -11,7 +11,7 @@ public interface BrandRepository extends JpaRepository<Brand,Integer> {
 	//Brand[] getAll();	
 	//List<Brand> getAll();
 	
-	
+	 boolean existsByName(String name);  // jpa bize exist'i gördüğünde kendisi true false dönen bir sorgu oluşturuyor. Keyword,
 	
 
 }
